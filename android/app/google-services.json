@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "311729561212",
+    "firebase_url": "https://restaurants-a8f50.firebaseio.com",
+    "project_id": "restaurants-a8f50",
+    "storage_bucket": "restaurants-a8f50.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:311729561212:android:d0d37d42d1032125",
+        "android_client_info": {
+          "package_name": "com.example.restaurapp_cliente"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "311729561212-ds6jimrugc16ud32emi9lv2f2fkplue9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcVvlHrVOt5lgAlc63xLvCEOGbpX1PDOc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "311729561212-ds6jimrugc16ud32emi9lv2f2fkplue9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "311729561212-8ibp0om4bb9qu3csov861blqcdqhelkh.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.disolutionsmx.restaurappCliente"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
