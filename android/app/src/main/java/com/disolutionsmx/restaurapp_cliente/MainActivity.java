@@ -1,4 +1,4 @@
-package com.example.restaurapp_cliente;
+package com.disolutionsmx.restaurapp_cliente;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
