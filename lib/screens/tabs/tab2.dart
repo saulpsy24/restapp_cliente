@@ -53,7 +53,7 @@ class Tab2 extends StatelessWidget {
                                 Center(
                                   child:Container(
                                     height: MediaQuery.of(context).size.height * .07,
-                                    width: MediaQuery.of(context).size.width * .40,
+                                    width: MediaQuery.of(context).size.width * .35,
                                     child:  Column(
                                       children: <Widget>[
                                         Text(document["nombre"]),

@@ -11,9 +11,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<MyProvider>(context);
-    if (provider.currentUser != "") {
-      Navigator.pop(context);
-    } else {
+   
       return Scaffold(
         body: Container(
           child: SafeArea(
@@ -52,7 +50,7 @@ class LoginPage extends StatelessWidget {
                     onPressed: () {
                       _fbKey.currentState.reset();
                       var page = RegisterPage();
-                      Navigator.push(context,
+                      Navigator.pushReplacement(context,
                           MaterialPageRoute(builder: (context) => page));
                     },
                   ),
@@ -62,7 +60,7 @@ class LoginPage extends StatelessWidget {
           ),
         ),
       );
-    }
+    
   }
 
   _login(_email, _password, context) async {
