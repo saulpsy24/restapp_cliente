@@ -70,13 +70,30 @@ class DetallePlatillo extends StatelessWidget {
                                           fontWeight: FontWeight.bold,
                                           fontSize: 20),
                                     ),
-                                    Text(
-                                      document["descripcion"],
-                                      style: TextStyle(
-                                          color: Colors.black87,
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 17),
+                                    Container(
+                                      height: MediaQuery.of(context).size.height * .19,
+                                      child: ListView(
+                                        children: <Widget>[
+                                          Text(
+                                            document["descripcion"],
+                                            style: TextStyle(
+                                                color: Colors.black87,
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 17),
+                                          )
+                                        ],
+                                      ),
                                     ),
+                                    Container(
+                                        width: MediaQuery.of(context).size.width*.9,
+                                        height:MediaQuery.of(context).size.height*.1,
+                                      child: Row(
+                                        children: <Widget>[
+                                          Icon(Icons.monetization_on),
+                                          Text(document["precio"]+"MXN",style: TextStyle(color: Colors.black87,fontSize: 19,fontWeight: FontWeight.bold),)
+                                        ],
+                                      ),
+                                        ),
                                     MaterialButton(
                                       onPressed: (){
                                         Navigator.pop(context);

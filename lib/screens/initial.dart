@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:restaurapp_cliente/homepage.dart';
 import 'package:restaurapp_cliente/provider/provider.dart';
+import 'package:restaurapp_cliente/screens/loginpage.dart';
 
 class InitialPage extends StatelessWidget {
   Future _scanQr(context) async {
@@ -19,6 +20,9 @@ class InitialPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
+    var myprovider = Provider.of<MyProvider>(context);
+    print(myprovider.currentUser);
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
@@ -53,14 +57,20 @@ class InitialPage extends StatelessWidget {
                     icon: Icon(Icons.camera_alt),
                     label: Text("Scanear mesa"),
                     onPressed: () {
-                      _scanQr(context).then((_) {
-                        final page = HomePage();
+                      if (myprovider.currentUser != "") {
+                        _scanQr(context).then((_) {
+                          final page = HomePage();
 
-                        Navigator.pushReplacement(context,
+                          Navigator.pushReplacement(context,
+                              MaterialPageRoute(builder: (context) => page));
+                        }).catchError((e) {
+                          print(e.message);
+                        });
+                      } else {
+                        final page = LoginPage();
+                        Navigator.push(context,
                             MaterialPageRoute(builder: (context) => page));
-                      }).catchError((e) {
-                        print(e.message);
-                      });
+                      }
                     },
                   ),
                 ],

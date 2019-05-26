@@ -8,7 +8,13 @@ class MyProvider with ChangeNotifier {
     _bottombarindex = index;
     notifyListeners();
   }
-
+  //Userlogin state
+  String _currentUser = "";
+  get currentUser => _currentUser;
+  set currentUser (String userNew){
+    _currentUser = userNew;
+    notifyListeners();
+  }
   //numero de mesa
 
   String noMesa = "2";

@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:restaurapp_cliente/homepage.dart';
+import 'package:flutter/services.dart';
+
 import 'package:restaurapp_cliente/provider/provider.dart';
 import 'package:restaurapp_cliente/screens/initial.dart';
 
 import 'package:splashscreen/splashscreen.dart';
 
-void main() => runApp(MyApp());
+void main()  {
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown
+  ]);
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.

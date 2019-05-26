@@ -48,19 +48,26 @@ class Tab2 extends StatelessWidget {
                                           image:
                                               NetworkImage(document['imagen']),
                                           fit: BoxFit.cover),
-                                      borderRadius: BorderRadius.circular(50)),
+                                      borderRadius: BorderRadius.circular(20)),
                                 ),
                                 Center(
-                                  child: Column(
-                                    children: <Widget>[
-                                      Text(document["nombre"]),
-                                      Text(document["precio"].toString()),
-                                    ],
-                                  ),
+                                  child:Container(
+                                    height: MediaQuery.of(context).size.height * .07,
+                                    width: MediaQuery.of(context).size.width * .40,
+                                    child:  Column(
+                                      children: <Widget>[
+                                        Text(document["nombre"]),
+                                        Text(document["precio"].toString()),
+                                      ],
+                                    ),
+                                  )
                                 ),
                                 FlatButton(
-                                  onPressed: () {},
-                                  child: Icon(Icons.arrow_right),
+                                  onPressed: () {
+                                    provider.nombreplato = document["nombre"];
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>DetallePlatillo()));
+                                  },
+                                  child: Icon(Icons.arrow_forward_ios),
                                 )
                               ],
                             ),
