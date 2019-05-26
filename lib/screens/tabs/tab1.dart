@@ -9,7 +9,7 @@ class Tab1  extends StatelessWidget {
 
     var provider = Provider.of<MyProvider>(context);
     return Container(
-        color: Colors.red,
+        color: Colors.grey[300],
           child: SafeArea(
             child: Center(
               child: Container(
