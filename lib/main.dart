@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:restaurapp_cliente/homepage.dart';
 import 'package:restaurapp_cliente/provider/provider.dart';
 import 'package:restaurapp_cliente/screens/initial.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             title: 'Flutter Demo',
             theme: ThemeData(
-              primarySwatch: Colors.orange,
+              primarySwatch: Colors.red,
             ),
             home: SplashScreen(
               seconds: 3,

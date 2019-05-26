@@ -27,4 +27,15 @@ class MyProvider with ChangeNotifier {
     mesaocupada = status;
     notifyListeners();
   }
+
+//nombre del platillo
+
+String _nombreplato = "";
+String get nombreplato => _nombreplato;
+
+set nombreplato (String nuevonombre){
+  _nombreplato = nuevonombre;
+  notifyListeners();
+}
+
 }
